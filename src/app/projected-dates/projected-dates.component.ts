@@ -35,9 +35,11 @@ export class ProjectedDatesComponent implements OnInit {
 
 
 function getProjectedDates(petDetails: Pet) {
+//TODO: Do Projected flow
+//microchip -> first rabies -> second rabies -> antibody -> Pre Expor && Advance notice
 
 
-
+//TODO: Then Actual Flow
 
 //MicroChip related================================================================
 //fix logic
@@ -46,9 +48,9 @@ function getProjectedDates(petDetails: Pet) {
     : '';
 
 //fix logic
-  let isActualMChipCleared = petDetails?.microChip && petDetails?.birthDate
-    ? CalculateDates.isMicroChipDateCleared(petDetails.birthDate, petDetails?.microChip)
-    : false;
+  // let isActualMChipCleared = petDetails?.microChip && petDetails?.birthDate
+  //   ? CalculateDates.isMicroChipDateCleared(petDetails.birthDate, petDetails?.microChip)
+  //   : false;
 
 //First Rabies Shot related================================================================
 //fix logic
@@ -57,9 +59,9 @@ function getProjectedDates(petDetails: Pet) {
     : '';
 
 //fix logic
-  let isActualFirstRabiesShotCleared = petDetails?.rabiesVaccine?.firstDate && petDetails?.microChip
-    ? CalculateDates.isFirstRabiesShotCleared(petDetails.birthDate, petDetails?.microChip)
-    : false;
+  // let isActualFirstRabiesShotCleared = petDetails?.rabiesVaccine?.firstDate && petDetails?.microChip
+  //   ? CalculateDates.isFirstRabiesShotCleared(petDetails.birthDate, petDetails?.microChip)
+  //   : false;
 
 //Second Rabies Shot related=================================================================
 //fix logic
@@ -68,9 +70,9 @@ function getProjectedDates(petDetails: Pet) {
     : '';
 
 //fix logic
-  let isActualSecondRabiesShotCleared = petDetails?.rabiesVaccine?.secondDate && petDetails?.rabiesVaccine?.firstDate
-    ? CalculateDates.isFirstRabiesShotCleared(petDetails.rabiesVaccine.firstDate, petDetails?.rabiesVaccine.secondDate)
-    : false;
+  // let isActualSecondRabiesShotCleared = petDetails?.rabiesVaccine?.secondDate && petDetails?.rabiesVaccine?.firstDate
+  //   ? CalculateDates.isFirstRabiesShotCleared(petDetails.rabiesVaccine.firstDate, petDetails?.rabiesVaccine.secondDate)
+  //   : false;
 
 //AntiBody test related================================================================
 //fix logic
@@ -79,9 +81,9 @@ function getProjectedDates(petDetails: Pet) {
     : '';
 
 //fix logic
-  let isActualAntiBodyTestCleared = petDetails?.antibodyTest && petDetails?.rabiesVaccine?.secondDate
-    ? CalculateDates.isFirstRabiesShotCleared(petDetails.rabiesVaccine.secondDate, petDetails?.antibodyTest)
-    : false;
+  // let isActualAntiBodyTestCleared = petDetails?.antibodyTest && petDetails?.rabiesVaccine?.secondDate
+  //   ? CalculateDates.isFirstRabiesShotCleared(petDetails.rabiesVaccine.secondDate, petDetails?.antibodyTest)
+  //   : false;
 
 //Pre Export related================================================================
 //fix logic
@@ -90,9 +92,9 @@ function getProjectedDates(petDetails: Pet) {
     : '';
 
 //fix logic
-  let isPreExportWaitingPeriodCleared = petDetails?.rabiesVaccine?.firstDate && petDetails?.microChip
-    ? CalculateDates.isPreExportWaitingPeriodCleared(petDetails.birthDate, petDetails?.microChip)
-    : false;
+  // let isPreExportWaitingPeriodCleared = petDetails?.rabiesVaccine?.firstDate && petDetails?.microChip
+  //   ? CalculateDates.isPreExportWaitingPeriodCleared(petDetails.birthDate, petDetails?.microChip)
+  //   : false;
 
 //Advanced Notification related================================================================
 //fix logic
@@ -101,9 +103,9 @@ function getProjectedDates(petDetails: Pet) {
     : '';
 
 //fix logic
-  let isAdvancedNotificationPeriodValid = petDetails?.rabiesVaccine?.firstDate && petDetails?.microChip
-    ? CalculateDates.isAdvancedNotificationPeriodValid(petDetails.birthDate, petDetails?.microChip)
-    : false;
+  // let isAdvancedNotificationPeriodValid = petDetails?.rabiesVaccine?.firstDate && petDetails?.microChip
+  //   ? CalculateDates.isAdvancedNotificationPeriodValid(petDetails.birthDate, petDetails?.microChip)
+  //   : false;
 
 
 
@@ -115,12 +117,12 @@ return {
     expectedAntiBodyTestDate,
     expectedPreExportDate,
     expectedAdvancedNotificationDeadline,
-    isActualMChipCleared,
-    isActualFirstRabiesShotCleared,
-    isActualSecondRabiesShotCleared,
-    isActualAntiBodyTestCleared,
-    isPreExportWaitingPeriodCleared,
-    isAdvancedNotificationPeriodValid,
+    // isActualMChipCleared,
+    // isActualFirstRabiesShotCleared,
+    // isActualSecondRabiesShotCleared,
+    // isActualAntiBodyTestCleared,
+    // isPreExportWaitingPeriodCleared,
+    // isAdvancedNotificationPeriodValid,
 
   }
 }

@@ -1,12 +1,12 @@
 <p>pet name: {{currentPet.petName}}</p>
 <p>pet birth date:   {{currentPet.birthDate}}</p>
 <p>Actual MChip date: {{currentPet.microChip}} <br>Expected MChip Date: {{petDates.expectedMChipDate}}</p>
-<div *ngIf="petDates.isActualMChipCleared; else microChipNotCleared"><p>Cleared</p></div>
+<!-- <div *ngIf="petDates.isActualMChipCleared; else microChipNotCleared"><p>Cleared</p></div> -->
 
 <ng-template #microChipNotCleared>
 <p>Microchip date {{petDates.expectedMChipDate}} not yet met.</p></ng-template>
 
-<div *ngIf="petDates.isActualFirstRabiesShotCleared; else firstRabiesShotNotCleared"><p>Cleared</p></div>
+<!-- <div *ngIf="petDates.isActualFirstRabiesShotCleared; else firstRabiesShotNotCleared"><p>Cleared</p></div> -->
 
 <ng-template #firstRabiesShotNotCleared>
 <p>First rabies shot date {{petDates.expectedFirstRabiesShotDate}} not yet met.</p></ng-template>
@@ -14,8 +14,8 @@
 
 <p>{{firstrabiesdate}}</p>
 <p>Expected first rabies shot Date: {{petDates.expectedFirstRabiesShotDate}}</p>
-<p>Actual first rabies shot Cleared {{petDates.isActualFirstRabiesShotCleared}}</p>
+<!-- <p>Actual first rabies shot Cleared {{petDates.isActualFirstRabiesShotCleared}}</p> -->
 
 <p>Expected MChip date: {{petDates.expectedMChipDate}} </p>
 
-<p>Actual MChip date: {{petDates.isActualMChipCleared}}</p>
+<!-- <p>Actual MChip date: {{petDates.isActualMChipCleared}}</p> -->
